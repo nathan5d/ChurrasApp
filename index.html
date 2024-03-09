@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras para Churrasco</title>
+
+    <script src="https://kit.fontawesome.com/eb087764b4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/semantic-ui/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="assets/semantic-ui/semantic.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="ui segment basic">
+        <div class="ui container">
+            <h2 class="ui center aligned icon header">
+                <i class="circular shopping basket icon"></i>
+                Churrasco - Lista de Compras
+            </h2>
+
+
+            <form class="ui form" id="churrasco-form">
+
+
+                <div class="participantes">
+
+                    <h4 class="ui dividing header">Participantes</h4>
+                    <div class="field">
+                        <div class="three fields">
+                            <div class="field">
+                                <label for="homens">Número de Homens:</label>
+                                <input type="number" id="homens" min="0" value="0">
+                            </div>
+                            <div class="field">
+                                <label for="mulheres">Número de Mulheres:</label>
+                                <input type="number" id="mulheres" min="0" value="0">
+                            </div>
+                            <div class="field">
+                                <label for="criancas">Número de Crianças:</label>
+                                <input type="number" id="criancas" min="0" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="assados">
+
+                    <h4 class="ui dividing header">Assados</h4>
+                    <div class="field">
+                        <div class="group fields">
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="bovina" id="bovina">
+                                    <label for="bovina">Carne bovina</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="suina" id="suina">
+                                    <label>
+                                        Carne Suína
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="linguica" id="linguica">
+                                    <label>
+                                        Linguiça
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="frango" id="frango">
+                                    <label>
+                                        Frango
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="paodealho" id="paodealho">
+                                    <label>
+                                        Pao de alho
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="queijo" id="queijo">
+                                    <label>
+                                        Queijo
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="bebidas">
+
+                    <h4 class="ui dividing header">Bebidas</h4>
+                    <div class="field">
+                        <div class="group fields">
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="cerveja" id="cerveja">
+                                    <label for="cerveja">
+                                        Cerveja
+                                    </label>
+
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="agua" id="agua">
+                                    <label>
+                                        Água
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="suco" id="suco">
+                                    <label>
+                                        Suco
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="refrigerante" id="refrigerante">
+                                    <label>
+                                        Refrigerante
+                                    </label>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="duracao">
+                    <h4 class="ui dividing header">Participantes</h4>
+                    <div class="field">
+                        <div class="four fields">
+                            <div class="field">
+                                <input type="radio" name="duracao" id="4h" value="4" checked>
+                                <label>
+                                    Até 4h
+                                </label>
+
+                            </div>
+                            <div class="field">
+                                <input type="radio" name="duracao" id="6h" value="6">
+                                <label>
+                                    Até 6h
+                                </label>
+
+                            </div>
+                            <div class="field">
+                                <input type="radio" name="duracao" id="8h" value="8">
+                                <label>
+                                    Até 8h
+                                </label>
+
+                            </div>
+                            <div class="field">
+                                <input type="radio" name="duracao" id="12h" value="12">
+                                <label>
+                                    Até 12h
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- Adicione mais itens aqui com caixas de seleção -->
+                <input type="submit" value="Calcular Lista" class="ui button">
+            </form>
+
+
+
+            <div class="ui info message">
+                <i class="close icon"></i>
+                <div class="header">
+                    Lista de Compras
+                </div>
+                <ul class="list" id="resultado">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('churrasco-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const homens = parseFloat(document.getElementById('homens').value);
+            const mulheres = parseFloat(document.getElementById('mulheres').value);
+            const criancas = parseFloat(document.getElementById('criancas').value);
+            const todos = (homens + mulheres) + (criancas / 2);
+            const adultos = (homens + mulheres);
+
+            const duracao = parseFloat(document.querySelector('input[name="duracao"]:checked').value);
+
+
+            console.log(duracao)
+
+            //assados
+            const bovinaCheckbox = document.getElementById('bovina');
+            const suinaCheckbox = document.getElementById('suina');
+            const linguicaCheckbox = document.getElementById('linguica');
+            const frangoCheckbox = document.getElementById('frango');
+            const paodealhoCheckbox = document.getElementById('paodealho');
+            const queijoCheckbox = document.getElementById('queijo');
+
+
+
+            let resultado = ``;
+
+            if (bovinaCheckbox.checked) {
+                resultado += ` <li>Carne Bovina: ${calcularCarneBovina(todos, duracao)} kg</li>
+               `
+            }
+            if (suinaCheckbox.checked) {
+                resultado += ` <li>Suina: ${calcularCarneSuina(todos, duracao)} kg</li>`
+            }
+
+            if (linguicaCheckbox.checked) {
+                resultado += `
+                <li>Linguiça: ${calcularLinguica(todos, duracao)} kg</li>`
+            }
+
+            if (frangoCheckbox.checked) {
+                resultado += `<li>Frango: ${calcularFrango(todos, duracao)} kg</li>`
+            }
+            if (queijoCheckbox.checked) {
+                resultado += `<li>Queijo: ${calcularQueijo(todos, duracao)} kg</li>`
+            }
+            if (paodealhoCheckbox.checked) {
+                resultado += `<li>Pão de Alho: ${calcularPaoDeAlho(todos, duracao)} kg</li>`
+            }
+
+
+
+
+            resultado += `<h3>Bebidas</h3>`
+
+            //bebidas
+            const cervejaCheckbox = document.getElementById('cerveja');
+            const aguaCheckbox = document.getElementById('agua');
+            const sucoCheckbox = document.getElementById('suco');
+            const refrigeranteCheckbox = document.getElementById('refrigerante');
+
+
+
+            if (cervejaCheckbox.checked) {
+                resultado += `
+                <li>Cerveja: ${calcularCerveja(adultos, duracao)} L</li>`
+            }
+
+            if (aguaCheckbox.checked) {
+                resultado += `<li>Água: ${calcularAgua(todos, duracao)} L</li>`
+            }
+            if (sucoCheckbox.checked) {
+                resultado += ` <li>Suco: ${calcularSuco(todos, duracao)} L</li>`
+            }
+            if (refrigeranteCheckbox.checked) {
+                resultado += `<li>Refrigerante: ${calcularRefrigerante(todos, duracao)} L</li>`
+            }
+
+            resultado += `
+                <!-- Adicione mais itens aqui -->
+                <h3>Esseciais</h3>
+                <br>
+                <li>Sal grosso: ${calcularSalGrosso(todos, duracao)} Kg</li>
+                <li>Carvao: ${calcularCarvao(todos, duracao)} Kg</li>
+                <li>Carvao: ${calcularGelo(todos, duracao)} Kg</li>`
+
+            document.getElementById('resultado').innerHTML = resultado;
+        });
+
+        function calcularCarneBovina(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 200 * fTempo) / 1000;
+        }
+        function calcularCarneSuina(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 150 * fTempo) / 1000;
+        }
+        function calcularLinguica(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 72 * fTempo) / 1000;
+        }
+
+        function calcularFrango(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 42 * fTempo) / 1000;
+        }
+        function calcularQueijo(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 23 * fTempo) / 1000;
+        }
+
+        function calcularPaoDeAlho(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 62 * fTempo) / 1000;
+        }
+
+
+
+
+        function calcularCerveja(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 860 * fTempo) / 1000;
+        }
+        function calcularRefrigerante(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 370 * fTempo) / 1000;
+        }
+        function calcularAgua(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 190 * fTempo) / 1000;
+        }
+        function calcularSuco(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 190 * fTempo) / 1000;
+        }
+
+
+        function calcularSalGrosso(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 34 * fTempo) / 1000;
+        }
+        function calcularCarvao(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 343 * fTempo) / 1000;
+        }
+        function calcularGelo(pessoas, duracao = 4) {
+            var fTempo = duracao / 4;
+            return (pessoas * 1600 * fTempo) / 1000;
+        }
+
+
+
+        // Adicione mais funções de cálculo aqui
+    </script>
+</body>
+
+</html>
