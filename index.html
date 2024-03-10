@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/eb087764b4.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="assets/semantic-ui/semantic.min.js"></script>
@@ -54,58 +55,57 @@
                 <div class="assados">
 
                     <h4 class="ui dividing header">Assados</h4>
-                    <div class="field">
-                        <div class="group fields">
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="bovina" id="bovina">
-                                    <label for="bovina">Carne bovina</label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="suina" id="suina">
-                                    <label>
-                                        Carne Suína
-                                    </label>
 
-                                </div>
+                    <div class="six fields">
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="bovina" id="bovina">
+                                <label for="bovina">Carne bovina</label>
                             </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="linguica" id="linguica">
-                                    <label>
-                                        Linguiça
-                                    </label>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="suina" id="suina">
+                                <label>
+                                    Carne Suína
+                                </label>
 
-                                </div>
                             </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="frango" id="frango">
-                                    <label>
-                                        Frango
-                                    </label>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="linguica" id="linguica">
+                                <label>
+                                    Linguiça
+                                </label>
 
-                                </div>
                             </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="paodealho" id="paodealho">
-                                    <label>
-                                        Pao de alho
-                                    </label>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="frango" id="frango">
+                                <label>
+                                    Frango
+                                </label>
 
-                                </div>
                             </div>
-                            <div class="field">
-                                <div class="ui checkbox">
-                                    <input type="checkbox" name="queijo" id="queijo">
-                                    <label>
-                                        Queijo
-                                    </label>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="paodealho" id="paodealho">
+                                <label>
+                                    Pao de alho
+                                </label>
 
-                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="queijo" id="queijo">
+                                <label>
+                                    Queijo
+                                </label>
+
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
 
                     <h4 class="ui dividing header">Bebidas</h4>
                     <div class="field">
-                        <div class="group fields">
+                        <div class="four fields">
                             <div class="field">
                                 <div class="ui checkbox">
                                     <input type="checkbox" name="cerveja" id="cerveja">
@@ -165,34 +165,45 @@
 
                 <div class="duracao">
                     <h4 class="ui dividing header">Participantes</h4>
-                    <div class="field">
-                        <div class="four fields">
+                    <div class="inline fields">
+                        <div class="fields">
                             <div class="field">
-                                <input type="radio" name="duracao" id="4h" value="4" checked>
-                                <label>
-                                    Até 4h
-                                </label>
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="duracao" id="4h" value="4" checked>
+                                    <label>
+                                        Até 4h
+                                    </label>
+                                </div>
+
 
                             </div>
                             <div class="field">
-                                <input type="radio" name="duracao" id="6h" value="6">
-                                <label>
-                                    Até 6h
-                                </label>
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="duracao" id="6h" value="6">
+                                    <label>
+                                        Até 6h
+                                    </label>
+                                </div>
+
 
                             </div>
                             <div class="field">
-                                <input type="radio" name="duracao" id="8h" value="8">
-                                <label>
-                                    Até 8h
-                                </label>
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="duracao" id="8h" value="8">
+                                    <label>
+                                        Até 8h
+                                    </label>
+                                </div>
 
                             </div>
                             <div class="field">
-                                <input type="radio" name="duracao" id="12h" value="12">
-                                <label>
-                                    Até 12h
-                                </label>
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="duracao" id="12h" value="12">
+                                    <label>
+                                        Até 12h
+                                    </label>
+                                </div>
+
 
                             </div>
                         </div>
@@ -216,8 +227,19 @@
                 </ul>
             </div>
         </div>
+
+        <div id="offline-message" class="offline-message">
+            Você está offline. O conteúdo pode não estar atualizado.
+        </div>
     </div>
     <script>
+        $(document).ready(function () {
+
+
+            $('.ui.checkbox,.ui.radio.checkbox')
+                .checkbox()
+                ;
+        })
         document.getElementById('churrasco-form').addEventListener('submit', function (event) {
             event.preventDefault();
             const homens = parseFloat(document.getElementById('homens').value);
@@ -369,6 +391,20 @@
 
 
         // Adicione mais funções de cálculo aqui
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Falha ao registrar o Service Worker:', error);
+                    });
+            });
+        }
     </script>
 </body>
 

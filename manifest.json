@@ -1,0 +1,21 @@
+{
+    "name": "ChurrasApp",
+    "short_name": "ChurrasApp",
+    "description": "Lista de Compras para o churrasco da galera",
+    "start_url": "https://nathan5d.github.io/ChurrasApp/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ],
+    "scope": "https://nathan5d.github.io/ChurrasApp/",
+    "serviceworker": {
+      "src": "https://nathan5d.github.io/ChurrasApp/service-worker.js"
+    }
+  }
+  
