@@ -5,9 +5,9 @@ const urlsToCache = [
     "/ChurrasApp/",
     "/ChurrasApp/index.html",
     "/ChurrasApp/fallback.html",
-    "/ChurrasApp/style.css",
+    //"/ChurrasApp/assets/style.css",
     "/ChurrasApp/icon.png",
-    "/ChurrasApp/logo.png",
+    //"/ChurrasApp/logo.png",
     // Adicione outros recursos que deseja cachear aqui
 ];
 
