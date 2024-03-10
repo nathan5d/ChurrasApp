@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Compras para Churrasco</title>
 
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/eb087764b4.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/semantic-ui/semantic.min.css">
@@ -393,7 +394,16 @@
         // Adicione mais funções de cálculo aqui
     </script>
 
+
     <script>
+
+        // Verificar status da conexão e exibir mensagem offline ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+            const offlineMessage = document.getElementById("offline-message");
+            offlineMessage.style.display = navigator.onLine ? "none" : "block";
+
+        });
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('service-worker.js')
