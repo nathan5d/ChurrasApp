@@ -7,17 +7,17 @@
     <title>Lista de Compras para Churrasco</title>
 
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-     <!-- Dentro da seção head -->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="manifest" href="manifest.json">
-     <meta name="apple-mobile-web-app-capable" content="yes">
-     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-     <meta name="apple-mobile-web-app-title" content="ChurrasApp">
-     <link rel="apple-touch-icon" href="icon.png">
-     <meta name="apple-mobile-web-app-status-bar" content="#ffffff" />
-     <meta name="theme-color" content="#ffffff" />
+    <!-- Dentro da seção head -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ChurrasApp">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
 
-     
+
     <script src="https://kit.fontawesome.com/eb087764b4.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/semantic-ui/semantic.min.css">
@@ -41,7 +41,7 @@
             <form class="ui form" id="churrasco-form">
 
 
-                <div class="participantes">
+                <div class="participantes" id="participantes-section">
 
                     <h4 class="ui dividing header">Participantes</h4>
                     <div class="field">
@@ -64,7 +64,7 @@
 
                 </div>
 
-                <div class="assados">
+                <div class="assados" id="assados-section">
 
                     <h4 class="ui dividing header">Assados</h4>
 
@@ -125,7 +125,7 @@
 
                 </div>
 
-                <div class="bebidas">
+                <div class="bebidas" id="bebidas-section">
 
                     <h4 class="ui dividing header">Bebidas</h4>
                     <div class="field">
@@ -175,10 +175,10 @@
 
                 </div>
 
-                <div class="duracao">
-                    <h4 class="ui dividing header">Participantes</h4>
-                    <div class="inline fields">
-                        <div class="fields">
+                <div class="duracao" id="duracao-section">
+                    <h4 class="ui dividing header center">Participantes</h4>
+                    <div class="field">
+                        <div class="four fields">
                             <div class="field">
                                 <div class="ui radio checkbox">
                                     <input type="radio" name="duracao" id="4h" value="4" checked>
@@ -224,8 +224,11 @@
 
 
                 </div>
-                <!-- Adicione mais itens aqui com caixas de seleção -->
-                <input type="submit" value="Calcular Lista" class="ui button">
+                <!-- Botões de navegação -->
+                <button type="button" id="prev-button" class="ui left button" onclick="prevSection()">Passo Anterior</button>
+                <button type="button" id="next-button" class="ui right floated button" onclick="nextSection()">Próxima Seção</button>
+
+                <button type="submit" class="fluid ui button" id="submit-form">Calcular Lista</button>
             </form>
 
 
@@ -427,6 +430,49 @@
             });
         }
     </script>
+
+
+    <script>
+        let currentSection = 1;
+
+        function showSection(sectionNumber) {
+            const sections = ["participantes-section", "assados-section", "bebidas-section", "duracao-section"];
+
+            sections.forEach(section => {
+                document.getElementById(section).style.display = "none";
+            });
+
+            document.getElementById(sections[sectionNumber - 1]).style.display = "block";
+
+            // Atualiza os botões de navegação
+            document.getElementById('prev-button').disabled = sectionNumber === 1;
+            document.getElementById('next-button').disabled = sectionNumber === sections.length;
+            //document.getElementById('submit-form').disabled = sectionNumber < sections.length;
+            // Atualiza a visibilidade do botão "Calcular Lista"
+            //document.getElementById('next-button').style.display = (sectionNumber < sections.length) ? "inline-block" : "none";
+            document.getElementById('submit-form').style.display = (sectionNumber === sections.length) ? "inline-block" : "none";
+
+        }
+
+        function nextSection() {
+            if (currentSection < 4) {
+                currentSection++;
+                showSection(currentSection);
+            }
+        }
+
+        function prevSection() {
+            if (currentSection > 1) {
+                currentSection--;
+                showSection(currentSection);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSection(currentSection);
+        });
+    </script>
+
 </body>
 
 </html>
